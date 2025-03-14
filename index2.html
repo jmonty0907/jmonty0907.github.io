@@ -1,24 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="utf-8"/><meta name="viewport" content="initial-scale=1.0"/>
-	<title>Docusign</title>
-	<link href="https://docucdn-a.akamaihd.net/olive/images/2.64.0/global-assets/ds-icons-favicon-default-64x64.svg" rel="icon" type="image/svg+xml" />
-	<link href="https://account.docusign.com/" rel="canonical" />
-	<base href="/" /><script type="text/javascript" nonce="C5zg1ebZ5fNbvhe6+gH5Lt1meivK1THm3NPvThQZkEo=">
-             window.__KAZMON_CONFIG__ = {
-                 buildVersion: "25.1.100.24447",
-                 environment: "NAPROD",
-                 instrumentationKey: "88d193ed-7206-4e34-975a-193a4fd08e36"
-             };
-
-
-        window.__NEW_ROOT_API__ = "True";
-        var FixtureHelper = {};
-    </script><!-- 25.1.100.24447 SE5FE13 577cd890-9a47-4490-a233-20f551e38aa1 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocuSign Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffffff;
+        }
+        .login-container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            width: 360px;
+            text-align: left;
+        }
+        .logo {
+            width: 160px;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .forgot-password {
+            text-align: right;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .forgot-password a {
+            color: #0078D4;
+            text-decoration: none;
+        }
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #FFCC00;
+            color: black;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #E6B800;
+        }
+        .sign-up {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .sign-up a {
+            color: #0078D4;
+            text-decoration: none;
+        }
+        .sign-up a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-<body class="site-content"><noscript>You need to enable JavaScript to run this app.</noscript>
-<div id="root">&nbsp;</div>
-
-<form name="fixtureForm"><input name="__original_url" type="hidden" value="https://account.docusign.com" /> <input id="fixtureInput" type="hidden" value="{&amp;quot;settings&amp;quot;:{&amp;quot;traceToken&amp;quot;:&amp;quot;577cd890-9a47-4490-a233-20f551e38aa1&amp;quot;,&amp;quot;siteRoot&amp;quot;:&amp;quot;https://account.docusign.com/&amp;quot;,&amp;quot;forgotPasswordUri&amp;quot;:&amp;quot;https://account.docusign.com/forgotpassword&amp;quot;,&amp;quot;flowSubmissionUris&amp;quot;:{&amp;quot;oAuth&amp;quot;:&amp;quot;/oauth/auth&amp;quot;,&amp;quot;sso&amp;quot;:&amp;quot;/saml2/login/sp&amp;quot;,&amp;quot;username&amp;quot;:&amp;quot;/username&amp;quot;,&amp;quot;password&amp;quot;:&amp;quot;/password&amp;quot;,&amp;quot;web&amp;quot;:&amp;quot;/web/login&amp;quot;,&amp;quot;signUp&amp;quot;:&amp;quot;/signup&amp;quot;,&amp;quot;securityKeyLogin&amp;quot;:&amp;quot;/securitykeylogin&amp;quot;,&amp;quot;resourceCredentialSecurityKeyCreation&amp;quot;:&amp;quot;/resources/v1/manage/security-key/create&amp;quot;,&amp;quot;resourceCredentialSecurityKeyLogin&amp;quot;:&amp;quot;/resources/v1/manage/security-key/login&amp;quot;},&amp;quot;allowGetBrowserFingerprint&amp;quot;:true,&amp;quot;renderInkLoginApp&amp;quot;:true,&amp;quot;assetPreloaderUrl&amp;quot;:null,&amp;quot;pseudoLocalizationEnabled&amp;quot;:false,&amp;quot;rebrandingEnabled&amp;quot;:true},&amp;quot;stateData&amp;quot;:{&amp;quot;state&amp;quot;:&amp;quot;username&amp;quot;,&amp;quot;oAuthLoginHintQS&amp;quot;:null,&amp;quot;oAuthLoginHintCookie&amp;quot;:null,&amp;quot;usernamePostAction&amp;quot;:null,&amp;quot;logoBytes&amp;quot;:null,&amp;quot;data&amp;quot;:null},&amp;quot;error&amp;quot;:null}" /> <input name="__RequestVerificationToken" type="hidden" value="AauwTCG7IG4BnsiWOtFsMd4AAAAA0" />&nbsp;</form>
-<script src="/ReactApp/src/vendor/html-domparser.js"></script><script src="/ReactApp/dist/bundle.js?version=25.1.100.24447"></script></body>
+<body>
+    <div class="login-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Docusign_Logo.png" alt="DocuSign Logo" class="logo">
+        <h2>Sign in to DocuSign</h2>
+        <form action="#" method="POST">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <div class="forgot-password">
+                <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit">Sign In</button>
+        </form>
+        <div class="sign-up">
+            New to DocuSign? <a href="#">Sign up for free</a>
+        </div>
+    </div>
+</body>
 </html>
