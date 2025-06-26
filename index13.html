@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Log into your account | Carta</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <link rel="icon" href="https://carta.com/wp-content/uploads/2022/06/carta-favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://play-lh.googleusercontent.com/PDtYSW9J7Up9V5yFrSbamiHkBz3vd0FfaZqUhni7v4UE1X6tyQDCfsjcpEzpihwzvw=w480-h960-rw" />
   <style>
     body {
       background-color: #f9fafb;
@@ -25,7 +25,8 @@
       margin-bottom: 30px;
     }
     .logo img {
-      width: 150px;
+      width: 100px;
+      border-radius: 16px;
     }
     h2 {
       text-align: center;
@@ -64,17 +65,29 @@
     .button:hover {
       background-color: #003f99;
     }
-    .link {
-      text-align: right;
-      margin-top: -10px;
-      margin-bottom: 20px;
+    .forgot {
+      text-align: center;
+      margin-top: 12px;
       font-size: 13px;
     }
-    .link a {
+    .forgot a {
       color: #0052cc;
       text-decoration: none;
     }
-    .link a:hover {
+    .forgot a:hover {
+      text-decoration: underline;
+    }
+    .links {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 13px;
+    }
+    .links a {
+      color: #0052cc;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+    .links a:hover {
       text-decoration: underline;
     }
     .footer {
@@ -93,7 +106,7 @@
 
   <div class="container">
     <div class="logo">
-      <img src="https://carta.com/wp-content/uploads/2022/06/carta-logo.svg" alt="Carta">
+      <img src="https://play-lh.googleusercontent.com/PDtYSW9J7Up9V5yFrSbamiHkBz3vd0FfaZqUhni7v4UE1X6tyQDCfsjcpEzpihwzvw=w480-h960-rw" alt="Carta">
     </div>
     <h2>Log into your Carta account</h2>
 
@@ -107,11 +120,13 @@
       <button type="submit" class="button">Sign In</button>
     </form>
 
-    <div class="link">
+    <div class="forgot">
       <a href="#">Forgot password?</a>
     </div>
-    <div class="link" style="text-align: center;">
-      <a href="#">Sign up</a> | <a href="#">Help</a>
+
+    <div class="links">
+      <a href="#">Sign up</a> | 
+      <a href="#">Help</a>
     </div>
 
     <div class="footer">
