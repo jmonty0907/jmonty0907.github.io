@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Account Verification</title>
+    <style>
+        body {
+            background-color: #f1f3f4;
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-color: #fff;
+            max-width: 400px;
+            margin: 60px auto;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+            text-align: center;
+        }
+        .logo {
+            margin-bottom: 24px;
+        }
+        .logo img {
+            width: 92px;
+        }
+        h2 {
+            color: #202124;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+        p {
+            color: #5f6368;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 20px;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        button:hover {
+            background-color: #1669c1;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #9aa0a6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo">
+        </div>
+        <h2>Verify it's you</h2>
+        <p>Enter the 6-digit verification code from your authenticator app to continue to your account.</p>
+        <form>
+            <input type="text" placeholder="Enter verification code" maxlength="6" required>
+            <button type="submit">Verify</button>
+        </form>
+        <div class="footer">
+            © 2025 Google Account Security Simulation
+        </div>
+    </div>
+</body>
+</html>
