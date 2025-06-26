@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Secure Account Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 380px;
+            margin: 80px auto;
+            background-color: white;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #111;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #a6a6a6;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .sign-in-button {
+            width: 100%;
+            background-color: #f0c14b;
+            border: 1px solid #a88734;
+            padding: 10px;
+            text-align: center;
+            color: #111;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .sign-in-button:hover {
+            background-color: #e2b33d;
+        }
+
+        .help-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .help-section a {
+            color: #0066c0;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .help-section a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Secure Account Login</h2>
+        <form>
+            <label for="email">Email (or mobile number)</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <div class="sign-in-button">Sign-In</div>
+        </form>
+
+        <div class="help-section">
+            <a href="#">Need help?</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        This page is part of an internal security awareness simulation exercise.
+    </div>
+
+</body>
+</html>
