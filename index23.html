@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Google OAuth 2.0 Playground</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      font-family: Roboto, Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .card {
+      max-width: 420px;
+      margin: 40px auto;
+      background: #fff;
+      border: 1px solid #dadce0;
+      border-radius: 8px;
+      padding: 30px 24px;
+      box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .header img {
+      height: 20px;
+      margin-right: 8px;
+    }
+
+    h2 {
+      font-size: 18px;
+      color: #1a73e8;
+      margin: 0 0 6px;
+    }
+
+    .user-email {
+      display: flex;
+      align-items: center;
+      margin: 12px 0 16px;
+      font-size: 14px;
+      color: #202124;
+    }
+
+    .user-email img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #d9d9d9;
+      margin-right: 8px;
+    }
+
+    .scope {
+      display: flex;
+      align-items: flex-start;
+      font-size: 14px;
+      margin: 16px 0;
+    }
+
+    .scope img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+      margin-top: 2px;
+    }
+
+    .scope-info {
+      line-height: 1.4;
+    }
+
+    .note {
+      font-size: 13px;
+      color: #5f6368;
+      margin-top: 20px;
+      line-height: 1.5;
+    }
+
+    .link {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 24px;
+    }
+
+    .btn {
+      padding: 8px 20px;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+      border: none;
+    }
+
+    .cancel {
+      background: none;
+      color: #1a73e8;
+    }
+
+    .allow {
+      background: #1a73e8;
+      color: white;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 11px;
+      color: #999;
+      margin-top: 40px;
+    }
+
+    .footer a {
+      color: #666;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="header">
+      <img src="https://ssl.gstatic.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google G" />
+      <span>Sign in with Google</span>
+    </div>
+
+    <h2>Google OAuth 2.0 Reauthorization</h2>
+    <p>Needs to access your Google Account</p>
+
+    <div class="user-email">
+      <img src="https://www.gstatic.com/images/icons/material/system/1x/account_circle_grey600_24dp.png" alt="User Icon" />
+      <span>user@domain.com</span>
+    </div>
+
+    <p>This will allow <strong>Google OAuth 2.0 Rauthorization</strong> to:</p>
+
+    <div class="scope">
+      <img src="https://www.gstatic.com/images/icons/material/product/1x/gmail_64dp.png" alt="Gmail Icon" />
+      <div class="scope-info">
+        Read, send, delete, and manage your email
+      </div>
+    </div>
+
+    <div class="note">
+      Make sure that you trust Google OAuth 2.0 Reauthorization You may be sharing sensitive info with this site or app. Find out how it handles your data by reviewing its terms of service and privacy policies. You can always see or remove access in your <a href="#" class="link">Google account</a>.<br><br>
+      <a href="#" class="link">Find out about the risks</a>
+    </div>
+
+    <div class="actions">
+      <button class="btn cancel">Cancel</button>
+      <button class="btn allow" onclick="window.location.href='https://internal-phish-endpoint.local/capture'">Allow</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>English (United States)</span>
+    <a href="#">Help</a>
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+  </div>
+
+</body>
+</html>
