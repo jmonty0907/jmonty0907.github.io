@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Grammarly - Request for Permission</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: Roboto, Arial, sans-serif;
+      color: #202124;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .card {
+      max-width: 480px;
+      background: #fff;
+      margin: 40px auto;
+      padding: 30px 24px;
+      border-radius: 8px;
+      box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+      border: 1px solid #dadce0;
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto 16px;
+      width: 92px;
+    }
+
+    .app-logo {
+      display: block;
+      margin: 0 auto 24px;
+      width: 48px;
+      height: 48px;
+    }
+
+    h1 {
+      font-size: 20px;
+      text-align: center;
+      color: #1a73e8;
+      margin-bottom: 8px;
+    }
+
+    .user-email {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      color: #202124;
+      margin: 16px 0;
+    }
+
+    .user-email img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      margin-right: 10px;
+      background-color: #d9d9d9;
+    }
+
+    .scopes {
+      font-size: 14px;
+      margin: 16px 0;
+    }
+
+    .scopes ul {
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+
+    .note {
+      font-size: 13px;
+      color: #5f6368;
+      margin-top: 20px;
+      line-height: 1.5;
+    }
+
+    .link {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 28px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .cancel {
+      background: none;
+      color: #1a73e8;
+    }
+
+    .allow {
+      background: #1a73e8;
+      color: white;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 11px;
+      color: #999;
+      margin-top: 40px;
+    }
+
+    .footer a {
+      color: #666;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <!-- Google logo -->
+    <img src="https://ssl.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google Logo" class="logo" />
+
+    <!-- Grammarly logo -->
+    <img src="https://images.ctfassets.net/1e6ajr2k4140/2f2FmI25DqGzoSIPBPuSwZ/f15bc532b2e5f00668e6bff393405db1/G_logomark_Color.png" alt="Grammarly Logo" class="app-logo" />
+
+    <h1>Grammarly wants access</h1>
+    <p style="text-align:center; font-size:14px;">to your Google Account</p>
+
+    <div class="user-email">
+      <img src="https://www.gstatic.com/images/icons/material/system/1x/account_circle_grey600_24dp.png" alt="User Icon" />
+      <span>user@domain.com</span>
+    </div>
+
+    <p style="font-size:14px; margin-bottom:6px;">This will allow <strong>Grammarly</strong> to:</p>
+
+    <div class="scopes">
+      <ul>
+        <li>Read, send, delete, and manage your email</li>
+        <li>View and edit the contents of your Google Drive files</li>
+        <li>View your basic account profile info</li>
+      </ul>
+    </div>
+
+    <div class="note">
+      Make sure you trust Grammarly. You may be sharing sensitive info with this site or app. Learn how Grammarly handles your data by reviewing their <a href="#" class="link">terms of service</a> and <a href="#" class="link">privacy policy</a>.<br><br>
+      You can always see or remove access in your <a href="https://myaccount.google.com/permissions" class="link">Google Account</a>.
+    </div>
+
+    <div class="actions">
+      <button class="btn cancel">Cancel</button>
+      <button class="btn allow" onclick="window.location.href='https://your-phish-simulator.local/grammarly/consent-capture'">Allow</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>English (United States)</span> ·
+    <a href="#">Help</a> ·
+    <a href="#">Privacy</a> ·
+    <a href="#">Terms</a>
+  </div>
+
+</body>
+</html>
