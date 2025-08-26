@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -77,24 +76,13 @@
     }
 
     .permissions ul {
-      list-style: none;
-      padding-left: 0;
+      list-style: disc;
+      padding-left: 20px;
       margin-top: 10px;
     }
 
     .permissions li {
       margin-bottom: 12px;
-    }
-
-    .caret {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      border-left: 2px solid #605e5c;
-      border-bottom: 2px solid #605e5c;
-      transform: rotate(-45deg);
-      margin-right: 6px;
-      vertical-align: middle;
     }
 
     .footer-note {
@@ -152,22 +140,19 @@
 </div>
 </div>
 <div class="permissions">
-    <p>This app would like to:</p>
-      <ul>
-<li>Read and write your calendars</li>
-<li>Read and write access to your files</li>
-<li>Read and write access to your email</li>
-<li>Sign in and read your profile</li>
+<p>This app would like to:</p>
+<ul>
+<li>Read your profile information</li>
+<li>Access your calendar</li>
+<li>Maintain access to data you have given it access to</li>
 </ul>
 </div>
 <div class="footer-note">
-      Accepting these permissions means that you allow this app to use your data as specified in their 
-      <a href="#">terms of service</a> and <a href="#">privacy statement</a>. You can change these permissions at 
-      <a href="#">https://myapps.microsoft.com</a>. <a href="#">Show details</a>
+<p>Accepting these permissions will allow the app to access the specified resources. You can review or remove access later in your account settings. <a href="#">Learn more</a>.</p>
 </div>
 <div class="actions">
 <button class="btn cancel">Cancel</button>
-<button class="btn accept" onclick="window.location.href='https://your-phish-simulator.local/calendly/consent-capture'">Accept</button>
+<button class="btn accept">Accept</button>
 </div>
 </div>
 </body>
