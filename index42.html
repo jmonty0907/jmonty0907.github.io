@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internal Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+      color: #000;
+    }
+    .container {
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .logo {
+      text-align: left;
+      margin-bottom: 30px;
+    }
+    .logo img {
+      height: 40px;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+    label {
+      display: block;
+      margin: 12px 0 6px;
+      font-weight: bold;
+    }
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 15px;
+      border: 1px solid #999;
+      border-radius: 2px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 15px;
+      background-color: #d9e6f8;
+      color: #000;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #c6d9f1;
+    }
+    .forgot {
+      display: inline-block;
+      margin-left: 15px;
+      font-size: 14px;
+    }
+    .forgot a {
+      color: #0047bb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .forgot a:hover {
+      text-decoration: underline;
+    }
+    .passcode {
+      margin: 25px 0 10px;
+      font-size: 14px;
+    }
+    .passcode a {
+      color: #0000ee;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .signup {
+      font-size: 14px;
+      margin-top: 20px;
+    }
+    .signup a {
+      font-weight: bold;
+      color: #0000ee;
+      text-decoration: none;
+    }
+    .signup a:hover {
+      text-decoration: underline;
+    }
+    .footer {
+      margin-top: 80px;
+      padding: 20px;
+      font-size: 12px;
+      color: #666;
+      text-align: center;
+      border-top: 1px solid #ddd;
+    }
+    .footer a {
+      margin: 0 5px;
+      color: #444;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAAiCAMAAACX1ixtAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA5FBMVEUAAAAAKFQAKFUAKVYAKFUAKFAAKFQAKFYAKFYAKFYAIFAAKFYAJ1QAKFUAKFgAJ1YAJ1UAJ1UAJlMAJ1UAJ1UAKVQAJ1UAKVcAKFYAKFcAKVcAKFgAJVUAKVYAKlUAKFgAKVUAMFAAKlpAr99Ast9AsuFAr99AtOFAr99Ast9Ast9AsuAAKVZAr99Asd9AsuFAs99AteFAst9As+BAs+FAs+BAt99Asd9As+JAsuFAs+FAs+FAsuFAsd9As+IAJ1ZAtd9AsuEAKVZAs+BAr99As+BAs+FAsuAAKVYAKFZAs+H////QRgnbAAAASXRSTlMAQL/vnyB/0MDfEIBwYECvz+9Qb5BwsLCg4HAgMM8wYJAQMDBwj0DfIFCgwI8QgJ9Af2C/f68gkL/fz++woK/PMKBQ4FDPgNCv0HBieQAAAAFiS0dES2kLhVAAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfmBh0EMjDtWuTcAAADMElEQVRIx+2Wa3eaQBCGl1vqguCl1BioGhMTULtqIfGGbdWmaWf//w/qLGwMRmPPMcnpl8zxuMte5hneWRgIIYqqgaYb5K3sBOBDgQI184NW8dX820Ad0WzfAdBXA6hgy555UiqXDGLriq5ARbdtvaqqH3HcVVVcoxc/6ccANEBtbF3XDRtqp1rFrIOmOQBnHnbOABSfavVTKBLAsWMAIAB13O0Q3/ysg1MHPZOojl49sPBnGI0KLmweJdEZKKiCXwPHV0Fw6oiSAIcoYAk4mgGF43JgQVmcH/SmQst3dwHn4LbQzGMBbTyhlu1ScBqgVKkEaBVPkQAFaNWmmINC2zaPIfipBloNkwxQlgALhDYpgBQpAG0iQLGV427CdJwLM20fIzT9XLTOhYzlOP/v9m7/zS7zF52rZ9cplNJyyT7o6zoId8a6vJO76vWfB4DVatW1LwcBfBfABvmxDYANny5VxJsBX8uHavI+wLZtACEf7QX4WNewomVSmV5JdRHYxCJUMiTga3Q9jEV47OY2jmSo7CaOo8shQ8B4Et+GZHTLp8MRkUtzAPz3acHzqIr+y9TzGtTAQbXgmhIQx7PJIJgxMp93OskgDXUcYH8e42xvFkwG8yQcLfji26jLJ9H3hOUA6JM0fog70WxyQkXUqopT+qNE8UxEzKOQLwmJFilgNRNOpgIgRGTJJJOot8DhfvcBoFEKBcOHtbis1UgjdetV5M09AMQm8nPAkqtQio247DyFMgfxMAMMkut8DlqO44s2swKRHXgCGGYA0g34DAVGTzKhyx0AW3EeRxtAdn4+w9pPjWiu7OwHoMcoSFgKiB5mtwGIGK34YBvQ1izRrBWhPlrT3g9Yin1pLkZkOhVjqx1AR0Am/W0AsSqGeK6FX/xuNKm+HxCKJ/gu02eZ/LqL4mkewETgPTwQbLogVrV48ggg54DZdrFTpJpI+zMS3fMk4PdZqOPV7360JRFOB4NxwIMEIfiV8idfaH1nLQuxs06r8KYuizOYHuuQCX27YdaN0vMUcUZY2kvXLEf4v+wuxf5282VlfDpHv+Ng+CInh0xIEfA+ezOAkCL6x3vwL+9ajdbdaZdVAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIyLTA2LTI5VDA0OjUwOjQ4KzAwOjAwsBy8MQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMi0wNi0yOVQwNDo1MDo0OCswMDowMMFBBI0AAAAASUVORK5CYII=" alt="Logo">
+    </div>
+    <h1>Log in</h1>
+    <form>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit">Log in</button>
+      <span class="forgot"><a href="#">Forgot password?</a></span>
+
+      <div class="passcode">
+        <a href="#">Log in with a passcode instead</a>
+      </div>
+
+      <div class="signup">
+        New to Internal Access? <a href="#">Sign up for a free account</a>
+      </div>
+    </form>
+  </div>
+
+  <div class="footer">
+    Community Guidelines | Listing Guidelines | Browse Vendors | Rules of Engagement | FAQ | Privacy | Terms of Service<br>
+    © 2025 YourCompany, Inc. and/or its affiliates. All rights reserved.
+  </div>
+</body>
+</html>
