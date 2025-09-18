@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internal Sign In</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .container {
+      max-width: 400px;
+      width: 90%;
+      padding: 40px;
+      border-radius: 8px;
+    }
+    .logo {
+      margin-bottom: 20px;
+    }
+    .logo img {
+      height: 50px;
+    }
+    h2 {
+      margin-bottom: 10px;
+    }
+    p.description {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      color: white;
+      background-color: #0071dc;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005bb5;
+    }
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+      width: 100%;
+    }
+    .footer a {
+      margin: 0 8px;
+      color: #555;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA1NDAgNTQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMzY4LjM4OSAyNDYuMDI3QzM3OS42NTMgMjQzLjcwOSA0NzkuMzE2IDE5OC4wODQgNDg4LjIxMSAxOTIuOTU0QzUwOC41MjEgMTgxLjIzOCA1MTUuNDc4IDE1NS4yOTEgNTAzLjc1MyAxMzVDNDkyLjAyNyAxMTQuNzA4IDQ2Ni4wNTggMTA3Ljc1NiA0NDUuNzQ5IDExOS40NzFDNDM2Ljg1MyAxMjQuNjAzIDM0Ny40NzYgMTg4LjAyNiAzMzkuODM1IDE5Ni42MTVDMzMxLjA3OSAyMDYuNDU4IDMyOS41NjUgMjIwLjUzNiAzMzYuMDQyIDIzMS43NDRDMzQyLjUyIDI0Mi45NTQgMzU1LjQ3OSAyNDguNjgyIDM2OC4zODkgMjQ2LjAyN1oiIGZpbGw9IiNGRkMyMjAiLz4KPHBhdGggZD0iTTQ4OC4yMTIgMzQ3LjA0NkM0NzkuMzE1IDM0MS45MTUgMzc5LjY1NCAyOTYuMjkgMzY4LjM4OSAyOTMuOTczQzM1NS40OCAyOTEuMzE4IDM0Mi41MiAyOTcuMDQ3IDMzNi4wNDQgMzA4LjI1NkMzMjkuNTY2IDMxOS40NjYgMzMxLjA4IDMzMy41NDQgMzM5LjgzNyAzNDMuMzg2QzM0Ny40NzcgMzUxLjk3NCA0MzYuODU1IDQxNS4zOTggNDQ1Ljc1MSA0MjAuNTNDNDY2LjA2IDQzMi4yNDUgNDkyLjAyOSA0MjUuMjkyIDUwMy43NTQgNDA1LjAwMUM1MTUuNDggMzg0LjcxIDUwOC41MiAzNTguNzYyIDQ4OC4yMTIgMzQ3LjA0NloiIGZpbGw9IiNGRkMyMjAiLz4KPHBhdGggZD0iTTI2OS43MjUgMzQ2LjUxMUMyNTYuNzcgMzQ2LjUxMSAyNDUuMzI1IDM1NC44NTkgMjQxLjE3MiAzNjcuMzU4QzIzNy41NDggMzc4LjI2NCAyMjcuMjYzIDQ4Ny4zMTIgMjI3LjI2MyA0OTcuNTc1QzIyNy4yNjMgNTIxLjAwNSAyNDYuMjc0IDU0MCAyNjkuNzI1IDU0MEMyOTMuMTc2IDU0MCAzMTIuMTg2IDUyMS4wMDUgMzEyLjE4NiA0OTcuNTc1QzMxMi4xODYgNDg3LjMxMiAzMDEuOTAxIDM3OC4yNjQgMjk4LjI3OCAzNjcuMzU4QzI5NC4xMjUgMzU0Ljg1OSAyODIuNjggMzQ2LjUxMSAyNjkuNzI1IDM0Ni41MTFaIiBmaWxsPSIjRkZDMjIwIi8+CjxwYXRoIGQ9Ik0xNzEuMDYxIDI5My45NzNDMTU5Ljc5NyAyOTYuMjkxIDYwLjEzMzggMzQxLjkxNiA1MS4yMzg3IDM0Ny4wNDZDMzAuOTI4OSAzNTguNzYyIDIzLjk3MDQgMzg0LjcwOSAzNS42OTU4IDQwNUM0Ny40MjEyIDQyNS4yOTIgNzMuMzkwNSA0MzIuMjQ0IDkzLjY5OTQgNDIwLjUyOUMxMDIuNTk1IDQxNS4zOTcgMTkxLjk3MiAzNTEuOTc0IDE5OS42MTMgMzQzLjM4NUMyMDguMzcgMzMzLjU0MiAyMDkuODgzIDMxOS40NjQgMjAzLjQwNiAzMDguMjU2QzE5Ni45MjggMjk3LjA0NyAxODMuOTcxIDI5MS4zMTggMTcxLjA2MSAyOTMuOTczWiIgZmlsbD0iI0ZGQzIyMCIvPgo8cGF0aCBkPSJNOTMuNzAwMyAxMTkuNDcxQzczLjM5MTUgMTA3Ljc1NiA0Ny40MjIxIDExNC43MDggMzUuNjk1OCAxMzVDMjMuOTcwNCAxNTUuMjkxIDMwLjkyODkgMTgxLjIzOCA1MS4yMzc4IDE5Mi45NTRDNjAuMTMzOCAxOTguMDg1IDE1OS43OTcgMjQzLjcxIDE3MS4wNiAyNDYuMDI3QzE4My45NyAyNDguNjgyIDE5Ni45MjkgMjQyLjk1MyAyMDMuNDA3IDIzMS43NDRDMjA5Ljg4NCAyMjAuNTM0IDIwOC4zNyAyMDYuNDU3IDE5OS42MTMgMTk2LjYxNEMxOTEuOTczIDE4OC4wMjYgMTAyLjU5NSAxMjQuNjAyIDkzLjcwMDMgMTE5LjQ3MVoiIGZpbGw9IiNGRkMyMjAiLz4KPHBhdGggZD0iTTI2OS43MjUgMEMyNDYuMjczIDAgMjI3LjI2MyAxOC45OTQ1IDIyNy4yNjMgNDIuNDI1MUMyMjcuMjYzIDUyLjY4NzggMjM3LjU0OCAxNjEuNzM2IDI0MS4xNzIgMTcyLjY0MkMyNDUuMzI1IDE4NS4xNDEgMjU2Ljc3MSAxOTMuNDg5IDI2OS43MjUgMTkzLjQ4OUMyODIuNjc5IDE5My40ODkgMjk0LjEyNSAxODUuMTQxIDI5OC4yNzggMTcyLjY0MkMzMDEuOTAxIDE2MS43MzYgMzEyLjE4NiA1Mi42ODc4IDMxMi4xODYgNDIuNDI1MUMzMTIuMTg2IDE4Ljk5NDUgMjkzLjE3NiAwIDI2OS43MjUgMFoiIGZpbGw9IiNGRkMyMjAiLz4KPC9zdmc+Cg==" alt="Logo">
+    </div>
+    <h2>Sign in or create your account</h2>
+    <p class="description">Not sure if you have an account? Enter your phone number or email and we'll check for you.</p>
+    <form>
+      <label for="identifier" style="font-weight: bold; display: block; margin-bottom: 5px; text-align: left;">Phone number or email</label>
+      <input type="text" id="identifier" name="identifier" placeholder="Enter your phone or email" required>
+      <p style="font-size: 12px; color: #666; text-align: left;">
+        Securing your personal information is our priority. <br>
+        <a href="#" style="color: #0071dc;">See our privacy measures.</a>
+      </p>
+      <button type="submit">Continue</button>
+    </form>
+  </div>
+  <div class="footer">
+    <p>
+      © 2025 YourCompany. All Rights Reserved. |
+      <a href="#">Give feedback</a> |
+      <a href="#">Privacy Choices</a> |
+      <a href="#">Notice at Collection</a> |
+      <a href="#">Request My Info</a> |
+      <a href="#">Delete Account</a>
+    </p>
+  </div>
+</body>
+</html>
